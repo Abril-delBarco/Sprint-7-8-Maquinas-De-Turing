@@ -1,0 +1,142 @@
+/* =========================================================================
+   auth.css — Estilos para autenticación (Login, Registro y UI condicional en Navbar)
+   Alineado con la paleta y tipografía de Hermanos Jota (index.css)
+   ========================================================================= */
+
+.auth-seccion {
+  padding-block: 3rem 4rem;
+}
+
+.auth-tarjeta {
+  max-width: 480px;
+  margin-inline: auto;
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 2rem 1.5rem;
+}
+
+.auth-tarjeta__cabecera {
+  margin-bottom: 1.5rem;
+}
+
+.auth-tarjeta__descripcion {
+  color: var(--color-texto-suave);
+  font-size: 0.92rem;
+}
+
+.auth-alerta {
+  border-radius: var(--radio-chico);
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  margin-bottom: 1.25rem;
+}
+
+.auth-alerta--error {
+  background-color: #fbeae8;
+  color: #8f2d2d;
+  border: 1px solid #e6b8b5;
+}
+
+.auth-alerta--exito {
+  background-color: #e7f0dd;
+  color: #4a5c34;
+  border: 1px solid #cddbb8;
+}
+
+.auth-tarjeta .boton {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.auth-tarjeta__pie {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-borde);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}
+
+.auth-tarjeta__pie a {
+  color: var(--color-terracota);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.auth-tarjeta__pie a:hover {
+  color: var(--color-terracota-oscuro);
+}
+
+/* ---------- Ajustes de Navbar para opciones de sesión ---------- */
+.nav-principal.nav--abierto {
+  max-height: 460px;
+}
+
+.nav-principal__item--auth {
+  display: flex;
+  align-items: center;
+}
+
+.nav-principal__boton-salir {
+  background: none;
+  border: none;
+  padding: 0.65rem 0;
+  width: 100%;
+  text-align: left;
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-terracota);
+  cursor: pointer;
+  transition: color var(--transicion);
+}
+
+.nav-principal__boton-salir:hover {
+  color: var(--color-terracota-oscuro);
+}
+
+.nav-principal__usuario {
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--color-borde);
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .auth-tarjeta {
+    padding: 2.5rem 2.25rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-principal__lista {
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  .nav-principal__usuario {
+    padding: 0;
+    border-bottom: none;
+    width: auto;
+  }
+
+  .nav-principal__boton-salir {
+    padding: 0.45rem 0.85rem;
+    width: auto;
+    border: 1px solid var(--color-terracota);
+    border-radius: var(--radio-chico);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-principal__boton-salir:hover {
+    background-color: var(--color-terracota);
+    color: var(--color-blanco);
+  }
+}
